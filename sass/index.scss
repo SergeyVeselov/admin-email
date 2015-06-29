@@ -1,0 +1,26 @@
+$sidebar-width: 250px;
+$header-height: 50px;
+.header {
+  position: fixed;
+  width: 100%;
+  height: $header-height;
+  margin-top: -$header-height;
+  background: yellow;
+}
+
+.medium {
+  margin-top: $header-height;
+}
+.sidebar {
+  position: fixed;
+  width: $sidebar-width;
+  height: 100%;
+  background: red;
+}
+
+.mailbox-container {
+  width: 100%;
+  margin-left: $sidebar-width;
+  background: green;
+}
+
