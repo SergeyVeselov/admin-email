@@ -1,5 +1,8 @@
 $sidebar-width: 250px;
 $header-height: 50px;
+$light-background: #fffaf0;
+$dark-background: #d3d3d3;
+$default-padding: 25px;
 
 .header {
   top: 0;
@@ -7,25 +10,97 @@ $header-height: 50px;
   position: fixed;
   width: 100%;
   height: $header-height;
-  background: yellow;
+  background-color: $light-background;
 }
 
 .medium {
   padding-top: $header-height;
 }
+
 .sidebar {
   position: fixed;
   width: $sidebar-width;
   height: 100%;
-  background: red;
+  background-color: $light-background;
 }
 
 .mailbox-container {
   width: 100%;
-  background: green;
   padding-left: $sidebar-width;
+}
+
+.search-line {
+  background-color: $dark-background;
+  padding-top: $default-padding;
+}
+
+.mail-list {
+  background-color: $dark-background;
+  padding: $default-padding;
+}
+
+.mailbox {
+  background-color: $dark-background;
+}
+
+.mailbox-caption {
+  padding-left: $default-padding;
+  display: inline-block;
+  font-size: large;
 }
 
 ul {
   margin-bottom: 0;
+  list-style-type: none;
+  background-color: $light-background;
+  padding: $default-padding;
+  :nth-child(odd) {
+    background-color: $dark-background;
+  }
+  :nth-child(even) {
+    background-color: $light-background
+  }
 }
+
+p {
+  margin: 0px;
+  font-size: large;
+}
+
+.search-line {
+  p {
+    vertical-align: baseline;
+    width: 100%;
+  }
+  form {
+    position: absolute;
+    right: 0;
+  }
+}
+
+.search {
+  vertical-align: baseline;
+  display: inline-block;
+  width: 521px;
+  padding-right: $default-padding;
+  div {
+    position: relative;
+    input[type="text"] {
+      width: 100%;
+      padding-right: 16px;
+    }
+    input[type="image"] {
+      position: absolute;
+      right: 0;
+      margin-top: auto;
+      margin-bottom: auto;
+      top: 0;
+      bottom: 0;
+    }
+  }
+
+  @media screen and (max-width: 900px) {
+    display: none;
+  }
+}
+
