@@ -1,15 +1,17 @@
 $sidebar-width: 250px;
 $header-height: 50px;
+
 .header {
+  top: 0;
+  left: 0;
   position: fixed;
   width: 100%;
   height: $header-height;
-  margin-top: -$header-height;
   background: yellow;
 }
 
 .medium {
-  margin-top: $header-height;
+  padding-top: $header-height;
 }
 .sidebar {
   position: fixed;
@@ -20,7 +22,7 @@ $header-height: 50px;
 
 .mailbox-container {
   width: 100%;
-  margin-left: $sidebar-width;
   background: green;
-}
+  padding-left: $sidebar-width;
 
+}
