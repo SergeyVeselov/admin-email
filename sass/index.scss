@@ -32,7 +32,7 @@ $light-green: #97C664;
   padding-left: $sidebar-width;
 }
 
-.search-line {
+.search-block {
   background-color: $dark-background;
   padding-top: $default-padding;
 }
@@ -70,7 +70,7 @@ p {
   font-size: large;
 }
 
-.search-line {
+.search-block {
   p {
     vertical-align: baseline;
     width: 100%;
