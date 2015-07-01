@@ -142,25 +142,108 @@ p {
   padding: $sidebar-left-padding;
 }
 
-.circle {
-  $diameter: 16px;
+@mixin circle($diameter) {
   border-radius: 50%;
-  background-color: $light-green;
   width: $diameter;
   height: $diameter;
-  text-align: center;
   line-height: $diameter;
   display: inline-block;
   position: absolute;
+  margin: auto;
+}
+
+.circle {
+  @include circle(16px);
+  background-color: $light-green;
+  text-align: center;
   right: 0;
   top: 0;
   bottom: 0;
-  vertical-align: baseline;
-  margin: auto;
   color: $light-background;
+  vertical-align: baseline;
 }
 
 ul {
   margin: 0;
+}
+
+.logo {
+  width: $sidebar-width;
+  height: 100%;
+  position: absolute;
+  display: inline;
+  img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    vertical-align: baseline;
+    height: auto;
+    width: 100%;
+  }
+}
+
+.right-header-block {
+  display: inline-block;
+  float: right;
+  height: 100%;
+  padding-right: $default-padding;
+  .language {
+    display: inline-block;
+    vertical-align: top;
+    height: 100%;
+    margin-right: 12px;
+    img {
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .language-name {
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+
+  .user {
+    display: inline-block;
+    height: 100%;
+    vertical-align: top;
+    .avatar {
+      display: inline-block;
+      @include circle(48px);
+      overflow: hidden;
+      border: solid 2px $dark-background;
+      background: $light-green;
+      position: relative;
+      vertical-align: middle;
+      img {
+        height: 40px;
+        width: auto;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        display: inline-block;
+      }
+    }
+    .name {
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+}
+
+div .helper {
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+}
+
+.link {
+  &:hover {
+    background-color: $dark-background;
+    cursor: pointer;
+  }
 }
 
