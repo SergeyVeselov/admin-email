@@ -35,28 +35,31 @@ $light-green: #97C664;
 .search-block {
   background-color: $dark-background;
   padding-top: $default-padding;
+  padding-bottom: $default-padding;
 }
 
 .mail-list {
   background-color: $dark-background;
-  padding: $default-padding;
 }
 
 .mailbox {
+  padding-left: $default-padding;
+  padding-right: $default-padding;
   background-color: $dark-background;
 }
 
 .mailbox-caption {
-  padding-left: $default-padding;
   display: inline-block;
   font-size: large;
+
 }
 
 .mail-list ul {
   margin-bottom: 0;
   list-style-type: none;
   background-color: $light-background;
-  padding: $default-padding;
+  padding-top: $default-padding;
+  padding-right: $default-padding;
   :nth-child(odd) {
     background-color: $dark-background;
   }
