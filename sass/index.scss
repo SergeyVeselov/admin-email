@@ -202,35 +202,35 @@ ul {
       vertical-align: middle;
     }
   }
+}
 
-  .user {
+.user {
+  display: inline-block;
+  height: 100%;
+  vertical-align: top;
+  .avatar {
     display: inline-block;
-    height: 100%;
-    vertical-align: top;
-    .avatar {
+    @include circle(48px);
+    overflow: hidden;
+    border: solid 2px $dark-background;
+    background: $light-background;
+    position: relative;
+    vertical-align: middle;
+    img {
+      height: 40px;
+      width: auto;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
       display: inline-block;
-      @include circle(48px);
-      overflow: hidden;
-      border: solid 2px $dark-background;
-      background: $light-green;
-      position: relative;
-      vertical-align: middle;
-      img {
-        height: 40px;
-        width: auto;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        margin: auto;
-        display: inline-block;
-      }
     }
-    .name {
-      display: inline-block;
-      vertical-align: middle;
-    }
+  }
+  .name {
+    display: inline-block;
+    vertical-align: middle;
   }
 }
 
@@ -244,6 +244,14 @@ div .helper {
   &:hover {
     background-color: $dark-background;
     cursor: pointer;
+  }
+}
+
+.contacts {
+  list-style-type: none;
+  padding: $sidebar-left-padding;
+  .user {
+    width: 100%;
   }
 }
 
