@@ -1,8 +1,11 @@
 $sidebar-width: 250px;
 $header-height: 50px;
-$light-background: #fffaf0;
-$dark-background: #d3d3d3;
+$light-background: #FFFFFF;
+$dark-background: #E7EBEE;
+$light-grey: #FAFAFA;
 $default-padding: 25px;
+$sidebar-left-padding: 10px;
+$light-green: #97C664;
 
 .header {
   top: 0;
@@ -49,7 +52,7 @@ $default-padding: 25px;
   font-size: large;
 }
 
-ul {
+.mail-list ul {
   margin-bottom: 0;
   list-style-type: none;
   background-color: $light-background;
@@ -102,5 +105,58 @@ p {
   @media screen and (max-width: 900px) {
     display: none;
   }
+}
+
+.with-bottom-border {
+  border-bottom: 1px solid $dark-background;
+}
+
+.compose-mail {
+  padding: $sidebar-left-padding;
+  button {
+    background-color: $light-green;
+    border: none;
+    color: $light-background;
+    width: 100%;
+    padding: 10px;
+  }
+}
+
+.folders ul {
+  list-style-type: none;
+  :nth-child(even) {
+    background-color: $light-grey
+  }
+  li {
+    cursor: pointer;
+    &:hover {
+      background-color: $dark-background;
+    }
+    width: 100%;
+    position: relative;
+  }
+  padding: $sidebar-left-padding;
+}
+
+.circle {
+  $diameter: 16px;
+  border-radius: 50%;
+  background-color: $light-green;
+  width: $diameter;
+  height: $diameter;
+  text-align: center;
+  line-height: $diameter;
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  vertical-align: baseline;
+  margin: auto;
+  color: $light-background;
+}
+
+ul {
+  margin: 0;
 }
 
