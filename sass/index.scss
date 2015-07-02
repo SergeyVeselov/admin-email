@@ -18,6 +18,7 @@ $light-green: #97C664;
 
 .medium {
   padding-top: $header-height;
+  height: 100%;
 }
 
 .sidebar {
@@ -54,16 +55,16 @@ $light-green: #97C664;
 
 }
 
-.mail-list ul {
+.letters {
   margin-bottom: 0;
   list-style-type: none;
   background-color: $light-background;
   padding-top: $default-padding;
   padding-right: $default-padding;
-  :nth-child(odd) {
+  >:nth-child(odd) {
     background-color: $dark-background;
   }
-  :nth-child(even) {
+  >:nth-child(even) {
     background-color: $light-background
   }
 }
@@ -255,5 +256,38 @@ div .helper {
     padding-top: 1px;
     padding-bottom: 1px;
   }
+}
+
+.custom-checkbox {
+  input  {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    &:checked + label i.checked {
+      visibility: visible;
+    }
+  }
+  label {
+    position: relative;
+    background: transparent!important;
+    margin-bottom: 0;
+    line-height: 100%;
+    i {
+      background-color: transparent!important;
+      &.checked {
+        position: absolute;
+        left: 0;
+        top: 0;
+        vertical-align: middle;
+        visibility: hidden;
+      }
+      &.unchecked{
+      }
+    }
+  }
+}
+
+.inline {
+  display: inline;
 }
 
