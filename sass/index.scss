@@ -7,6 +7,16 @@ $default-padding: 25px;
 $sidebar-left-padding: 10px;
 $light-green: #97C664;
 
+html, body {
+  height: 100%;
+}
+
+@mixin center-vertical {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 .header {
   top: 0;
   left: 0;
@@ -14,6 +24,7 @@ $light-green: #97C664;
   width: 100%;
   height: $header-height;
   background-color: $light-background;
+  z-index: 1;
 }
 
 .medium {
@@ -30,6 +41,7 @@ $light-green: #97C664;
 
 .mailbox-container {
   width: 100%;
+  height: 100%;
   padding-left: $sidebar-width;
 }
 
@@ -39,11 +51,8 @@ $light-green: #97C664;
   padding-bottom: $default-padding;
 }
 
-.mail-list {
-  background-color: $dark-background;
-}
-
 .mailbox {
+  height: 100%;
   padding-left: $default-padding;
   padding-right: $default-padding;
   background-color: $dark-background;
@@ -56,15 +65,15 @@ $light-green: #97C664;
 }
 
 .letters {
+  height: 100%;
   margin-bottom: 0;
   list-style-type: none;
   background-color: $light-background;
-  padding-top: $default-padding;
-  padding-right: $default-padding;
-  >:nth-child(odd) {
+  padding: $default-padding;
+  > :nth-child(odd) {
     background-color: $dark-background;
   }
-  >:nth-child(even) {
+  > :nth-child(even) {
     background-color: $light-background
   }
 }
@@ -80,7 +89,7 @@ p {
     width: 100%;
   }
   form {
-    position: absolute;
+    float: right;
     right: 0;
   }
 }
@@ -89,7 +98,6 @@ p {
   vertical-align: baseline;
   display: inline-block;
   width: 521px;
-  padding-right: $default-padding;
   div {
     position: relative;
     input[type="text"] {
@@ -241,11 +249,15 @@ div .helper {
   height: 100%;
 }
 
-.link {
+.contacts-link {
   &:hover {
     background-color: $dark-background;
     cursor: pointer;
   }
+}
+
+.letter-link {
+  cursor: pointer;
 }
 
 .contacts {
@@ -259,21 +271,15 @@ div .helper {
 }
 
 .custom-checkbox {
-  input  {
-    visibility: hidden;
-    width: 0;
-    height: 0;
-    &:checked + label i.checked {
-      visibility: visible;
-    }
-  }
   label {
     position: relative;
-    background: transparent!important;
+    background: transparent !important;
     margin-bottom: 0;
     line-height: 100%;
+    height: 100%;
+    vertical-align: middle;
     i {
-      background-color: transparent!important;
+      background-color: transparent !important;
       &.checked {
         position: absolute;
         left: 0;
@@ -281,13 +287,68 @@ div .helper {
         vertical-align: middle;
         visibility: hidden;
       }
-      &.unchecked{
+      &.unchecked {
+      }
+    }
+    input {
+      position: absolute;
+      visibility: hidden;
+      width: 0;
+      height: 0;
+      &:checked ~ i.checked {
+        visibility: visible;
       }
     }
   }
 }
 
-.inline {
-  display: inline;
+.letter {
+  height: 32px;
+  white-space: nowrap;
+  padding-left: 8px;
+  div {
+    display: inline-block;
+  }
 }
 
+.checkbox-wrapper {
+  height: 100%;
+}
+
+.sender {
+  padding-left: 8px;
+  width: 256px;
+}
+
+.letter-preview {
+  @include center-vertical;
+  width: 60%;
+  overflow: hidden;
+}
+
+.letter-title {
+  font-weight: bold;
+  float: left;
+}
+
+.letter-beginning {
+  padding-left: 8px;
+  color: #777;
+}
+
+.fa-lg {
+  vertical-align: 0!important;
+}
+
+.receiving-time {
+  @include center-vertical;
+  float: right;
+  width: 10%;
+  text-align: right;
+  padding-right: 8px;
+}
+
+.left-wrapper {
+  //height: 100%;
+  width: 30%;
+}
