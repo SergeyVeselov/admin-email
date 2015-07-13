@@ -4,186 +4,643 @@
     <meta charset="UTF-8">
     <title></title>
     <meta name="viewport" content="width=device-width initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="sass/index.css">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <script src="js/bootstrap.min.js"></script>
 </head>
 <body>
-<div class="header with-bottom-border">
-    <div class="logo">
-        <a href="http://akveo.com">
-            <img src="http://akveo.com/img/logo.png"/>
-        </a>
-    </div>
-    <div class="right-header-block">
-        <div class="language link">
-            <div class="helper"></div>
-            <img src="img/gb.png"/>
-
-            <div class="language-name">English</div>
-        </div>
-        <div class="user link">
-            <div class="name">Bart Simpson</div>
-            <div class="avatar">
-                <img src="img/bart.png">
+<nav class="navbar navbar-default navbar-fixed-top">
+    <a class="navbar-brand hidden-xs" href="#">
+        <img src="http://akveo.com/img/logo.png">
+    </a>
+</nav>
+<div class="main-block">
+    <div class="sidebar hidden-xs">
+        <div class="sidebar-content">
+            <div class="compose-mail bottom-border">
+                <button>Compose mail</button>
             </div>
-        </div>
-    </div>
-</div>
-<div class="medium">
-    <div class="sidebar">
-        <div class="compose-mail with-bottom-border">
-            <button>Compose mail</button>
-        </div>
-        <div class="folders with-bottom-border">
-            <ul>
-                <li>Inbox
-                    <div class="circle">3</div>
-                </li>
-                <li>Sent mail</li>
-                <li>Draft</li>
-                <li>Spam
-                    <div class="circle">2</div>
-                </li>
-                <li>Trash
-                    <div class="circle">7</div>
-                </li>
-            </ul>
-        </div>
-        <div class="contacts">
-            <div class="user contacts-link">
-                <div class="avatar">
-                    <img src="img/homer.png">
+            <div class="folders bottom-border">
+                <div>
+                    <div class="link">Inbox<span class="badge">123</span></div>
                 </div>
-                <div class="name">Homer Simpson</div>
-            </div>
-            <div class="user contacts-link">
-                <div class="avatar">
-                    <img src="img/marge.jpeg">
+                <div>
+                    <div class="link">Sent mail</div>
                 </div>
-                <div class="name">Marge Simpson</div>
-            </div>
-            <div class="user contacts-link">
-                <div class="avatar">
-                    <img src="img/lisa.png">
+                <div>
+                    <div class="link">Draft<span class="badge">12</span></div>
                 </div>
-                <div class="name">Lisa Simpson</div>
-            </div>
-            <div class="user contacts-link">
-                <div class="avatar">
-                    <img src="img/milhouse.jpeg">
+                <div>
+                    <div class="link">Spam</div>
                 </div>
-                <div class="name">Milhouse Van Houten</div>
+                <div>
+                    <div class="link">Trash</div>
+                </div>
             </div>
-
+            <div class="contacts">
+                <div class="user link">
+                    <div class="avatar">
+                        <img src="img/homer.png">
+                    </div>
+                    <div class="name">Homer Simpson</div>
+                </div>
+                <div class="user link">
+                    <div class="avatar">
+                        <img src="img/marge.jpeg">
+                    </div>
+                    <div class="name">Marge Simpson</div>
+                </div>
+                <div class="user link">
+                    <div class="avatar">
+                        <img src="img/lisa.png">
+                    </div>
+                    <div class="name">Lisa Simpson</div>
+                </div>
+                <div class="user link">
+                    <div class="avatar">
+                        <img src="img/milhouse.jpeg">
+                    </div>
+                    <div class="name">Milhouse Van Houten</div>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="mailbox-container">
-        <div class="mailbox">
-            <div class="search-block">
-                <div class="mailbox-caption">Mailbox</div>
-                <form name="search" class="search">
-                    <div>
-                        <input type="text">
-                        <input type="image" src="img/search.png">
+    <div class="mailbox">
+        <div class="container-fluid">
+            <div class="row bottom-border">
+                <div class=" col-xs-8 col-sm-4">
+                    <div class="checkbox-wrapper">
+                        <div class="custom-checkbox letter-checkbox">
+                            <label>
+                                <input type="checkbox"/>
+                                <i class="fa fa-square-o unchecked fa-lg"></i>
+                                <i class="fa fa-check-square-o checked fa-lg"></i>
+                            </label>
+                        </div>
                     </div>
-                </form>
+                    <div class="checkbox-wrapper">
+                        <div class="custom-checkbox letter-checkbox">
+                            <label>
+                                <input type="checkbox"/>
+                                <i class="fa fa-star-o unchecked fa-lg"></i>
+                                <i class="fa fa-star checked fa-lg"></i>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="sender letter-link">Homer Simpson</div>
+                </div>
+                <div class="col-xs-4 col-sm-2 col-sm-push-6 col-lg-1 col-lg-push-7">
+                    <div class="receiving-time pull-right">Jun 24</div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-sm-pull-2 col-lg-7 col-lg-pull-1 letter-preview link">
+                    <div class="letter-title">Why you little!</div>
+                    <div class="letter-beginning">Spider-Pig, Spider-Pig, does whatever a Spider-Pig does. Can
+                        he swing from a web? No, he can't, he's a pig, Look out, he is a Spider-Pig!
+                    </div>
+                </div>
             </div>
-            <div>
-                <div class="letters">
-                    <div class="letter">
-                        <div class="left-wrapper">
-                            <div class="checkbox-wrapper">
-                                <div class="custom-checkbox letter-checkbox">
-                                    <label>
-                                        <input type="checkbox"/>
-                                        <i class="fa fa-square-o unchecked fa-lg"></i>
-                                        <i class="fa fa-check-square-o checked fa-lg"></i>
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="checkbox-wrapper">
-                                <div class="custom-checkbox letter-checkbox">
-                                    <label>
-                                        <input type="checkbox"/>
-                                        <i class="fa fa-star-o unchecked fa-lg"></i>
-                                        <i class="fa fa-star checked fa-lg"></i>
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="sender letter-link">Homer Simpson</div>
-                        </div>
-                        <div class="receiving-time">Jun 4</div>
-                        <div class="letter-preview letter-link">
-                            <div class="letter-title">Why you little!</div>
-                            <div class="letter-beginning">Spider-Pig, Spider-Pig, does whatever a Spider-Pig does. Can
-                                he swing from a web? No, he can't, he's a pig, Look out, he is a Spider-Pig!
-                            </div>
+            <div class="row bottom-border">
+                <div class=" col-xs-8 col-sm-4">
+                    <div class="checkbox-wrapper">
+                        <div class="custom-checkbox letter-checkbox">
+                            <label>
+                                <input type="checkbox"/>
+                                <i class="fa fa-square-o unchecked fa-lg"></i>
+                                <i class="fa fa-check-square-o checked fa-lg"></i>
+                            </label>
                         </div>
                     </div>
-                    <div class="letter">
-                        <div class="left-wrapper">
-                            <div class="checkbox-wrapper">
-                                <div class="custom-checkbox letter-checkbox">
-                                    <label>
-                                        <input type="checkbox"/>
-                                        <i class="fa fa-square-o unchecked fa-lg"></i>
-                                        <i class="fa fa-check-square-o checked fa-lg"></i>
-
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="checkbox-wrapper">
-                                <div class="custom-checkbox letter-checkbox">
-                                    <label>
-                                        <input type="checkbox"/>
-                                        <i class="fa fa-star-o unchecked fa-lg"></i>
-                                        <i class="fa fa-star checked fa-lg"></i>
-
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="sender letter-link">Homer Simpson</div>
-                        </div>
-                        <div class="receiving-time">Jun 4</div>
-                        <div class="letter-preview letter-link">
-                            <div class="letter-title">Why you little!</div>
-                            <div class="letter-beginning">Spider-Pig, Spider-Pig, does whatever a Spider-Pig does. Can
-                                he swing from a web? No, he can't, he's a pig, Look out, he is a Spider-Pig!
-                            </div>
+                    <div class="checkbox-wrapper">
+                        <div class="custom-checkbox letter-checkbox">
+                            <label>
+                                <input type="checkbox"/>
+                                <i class="fa fa-star-o unchecked fa-lg"></i>
+                                <i class="fa fa-star checked fa-lg"></i>
+                            </label>
                         </div>
                     </div>
-                    <div class="letter">
-                        <div class="left-wrapper">
-                            <div class="checkbox-wrapper">
-                                <div class="custom-checkbox letter-checkbox">
-                                    <label>
-                                        <input type="checkbox"/>
-                                        <i class="fa fa-square-o unchecked fa-lg"></i>
-                                        <i class="fa fa-check-square-o checked fa-lg"></i>
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="checkbox-wrapper">
-                                <div class="custom-checkbox letter-checkbox">
-                                    <label>
-                                        <input type="checkbox"/>
-                                        <i class="fa fa-star-o unchecked fa-lg"></i>
-                                        <i class="fa fa-star checked fa-lg"></i>
-
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="sender letter-link">Homer Simpson</div>
+                    <div class="sender letter-link">Homer Simpson</div>
+                </div>
+                <div class="col-xs-4 col-sm-2 col-sm-push-6 col-lg-1 col-lg-push-7">
+                    <div class="receiving-time pull-right">Jun 24</div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-sm-pull-2 col-lg-7 col-lg-pull-1 letter-preview link">
+                    <div class="letter-title">Why you little!</div>
+                    <div class="letter-beginning">Spider-Pig, Spider-Pig, does whatever a Spider-Pig does. Can
+                        he swing from a web? No, he can't, he's a pig, Look out, he is a Spider-Pig!
+                    </div>
+                </div>
+            </div>
+            <div class="row bottom-border">
+                <div class=" col-xs-8 col-sm-4">
+                    <div class="checkbox-wrapper">
+                        <div class="custom-checkbox letter-checkbox">
+                            <label>
+                                <input type="checkbox"/>
+                                <i class="fa fa-square-o unchecked fa-lg"></i>
+                                <i class="fa fa-check-square-o checked fa-lg"></i>
+                            </label>
                         </div>
-                        <div class="receiving-time">Jun 4</div>
-                        <div class="letter-preview letter-link">
-                            <div class="letter-title">Why you little!</div>
-                            <div class="letter-beginning">Spider-Pig, Spider-Pig, does whatever a Spider-Pig does. Can
-                                he swing from a web? No, he can't, he's a pig, Look out, he is a Spider-Pig!
-                            </div>
+                    </div>
+                    <div class="checkbox-wrapper">
+                        <div class="custom-checkbox letter-checkbox">
+                            <label>
+                                <input type="checkbox"/>
+                                <i class="fa fa-star-o unchecked fa-lg"></i>
+                                <i class="fa fa-star checked fa-lg"></i>
+                            </label>
                         </div>
+                    </div>
+                    <div class="sender letter-link">Homer Simpson</div>
+                </div>
+                <div class="col-xs-4 col-sm-2 col-sm-push-6 col-lg-1 col-lg-push-7">
+                    <div class="receiving-time pull-right">Jun 24</div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-sm-pull-2 col-lg-7 col-lg-pull-1 letter-preview link">
+                    <div class="letter-title">Why you little!</div>
+                    <div class="letter-beginning">Spider-Pig, Spider-Pig, does whatever a Spider-Pig does. Can
+                        he swing from a web? No, he can't, he's a pig, Look out, he is a Spider-Pig!
+                    </div>
+                </div>
+            </div>
+            <div class="row bottom-border">
+                <div class=" col-xs-8 col-sm-4">
+                    <div class="checkbox-wrapper">
+                        <div class="custom-checkbox letter-checkbox">
+                            <label>
+                                <input type="checkbox"/>
+                                <i class="fa fa-square-o unchecked fa-lg"></i>
+                                <i class="fa fa-check-square-o checked fa-lg"></i>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="checkbox-wrapper">
+                        <div class="custom-checkbox letter-checkbox">
+                            <label>
+                                <input type="checkbox"/>
+                                <i class="fa fa-star-o unchecked fa-lg"></i>
+                                <i class="fa fa-star checked fa-lg"></i>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="sender letter-link">Homer Simpson</div>
+                </div>
+                <div class="col-xs-4 col-sm-2 col-sm-push-6 col-lg-1 col-lg-push-7">
+                    <div class="receiving-time pull-right">Jun 24</div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-sm-pull-2 col-lg-7 col-lg-pull-1 letter-preview link">
+                    <div class="letter-title">Why you little!</div>
+                    <div class="letter-beginning">Spider-Pig, Spider-Pig, does whatever a Spider-Pig does. Can
+                        he swing from a web? No, he can't, he's a pig, Look out, he is a Spider-Pig!
+                    </div>
+                </div>
+            </div>
+            <div class="row bottom-border">
+                <div class=" col-xs-8 col-sm-4">
+                    <div class="checkbox-wrapper">
+                        <div class="custom-checkbox letter-checkbox">
+                            <label>
+                                <input type="checkbox"/>
+                                <i class="fa fa-square-o unchecked fa-lg"></i>
+                                <i class="fa fa-check-square-o checked fa-lg"></i>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="checkbox-wrapper">
+                        <div class="custom-checkbox letter-checkbox">
+                            <label>
+                                <input type="checkbox"/>
+                                <i class="fa fa-star-o unchecked fa-lg"></i>
+                                <i class="fa fa-star checked fa-lg"></i>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="sender letter-link">Homer Simpson</div>
+                </div>
+                <div class="col-xs-4 col-sm-2 col-sm-push-6 col-lg-1 col-lg-push-7">
+                    <div class="receiving-time pull-right">Jun 24</div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-sm-pull-2 col-lg-7 col-lg-pull-1 letter-preview link">
+                    <div class="letter-title">Why you little!</div>
+                    <div class="letter-beginning">Spider-Pig, Spider-Pig, does whatever a Spider-Pig does. Can
+                        he swing from a web? No, he can't, he's a pig, Look out, he is a Spider-Pig!
+                    </div>
+                </div>
+            </div>
+            <div class="row bottom-border">
+                <div class=" col-xs-8 col-sm-4">
+                    <div class="checkbox-wrapper">
+                        <div class="custom-checkbox letter-checkbox">
+                            <label>
+                                <input type="checkbox"/>
+                                <i class="fa fa-square-o unchecked fa-lg"></i>
+                                <i class="fa fa-check-square-o checked fa-lg"></i>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="checkbox-wrapper">
+                        <div class="custom-checkbox letter-checkbox">
+                            <label>
+                                <input type="checkbox"/>
+                                <i class="fa fa-star-o unchecked fa-lg"></i>
+                                <i class="fa fa-star checked fa-lg"></i>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="sender letter-link">Homer Simpson</div>
+                </div>
+                <div class="col-xs-4 col-sm-2 col-sm-push-6 col-lg-1 col-lg-push-7">
+                    <div class="receiving-time pull-right">Jun 24</div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-sm-pull-2 col-lg-7 col-lg-pull-1 letter-preview link">
+                    <div class="letter-title">Why you little!</div>
+                    <div class="letter-beginning">Spider-Pig, Spider-Pig, does whatever a Spider-Pig does. Can
+                        he swing from a web? No, he can't, he's a pig, Look out, he is a Spider-Pig!
+                    </div>
+                </div>
+            </div>
+            <div class="row bottom-border">
+                <div class=" col-xs-8 col-sm-4">
+                    <div class="checkbox-wrapper">
+                        <div class="custom-checkbox letter-checkbox">
+                            <label>
+                                <input type="checkbox"/>
+                                <i class="fa fa-square-o unchecked fa-lg"></i>
+                                <i class="fa fa-check-square-o checked fa-lg"></i>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="checkbox-wrapper">
+                        <div class="custom-checkbox letter-checkbox">
+                            <label>
+                                <input type="checkbox"/>
+                                <i class="fa fa-star-o unchecked fa-lg"></i>
+                                <i class="fa fa-star checked fa-lg"></i>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="sender letter-link">Homer Simpson</div>
+                </div>
+                <div class="col-xs-4 col-sm-2 col-sm-push-6 col-lg-1 col-lg-push-7">
+                    <div class="receiving-time pull-right">Jun 24</div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-sm-pull-2 col-lg-7 col-lg-pull-1 letter-preview link">
+                    <div class="letter-title">Why you little!</div>
+                    <div class="letter-beginning">Spider-Pig, Spider-Pig, does whatever a Spider-Pig does. Can
+                        he swing from a web? No, he can't, he's a pig, Look out, he is a Spider-Pig!
+                    </div>
+                </div>
+            </div>
+            <div class="row bottom-border">
+                <div class=" col-xs-8 col-sm-4">
+                    <div class="checkbox-wrapper">
+                        <div class="custom-checkbox letter-checkbox">
+                            <label>
+                                <input type="checkbox"/>
+                                <i class="fa fa-square-o unchecked fa-lg"></i>
+                                <i class="fa fa-check-square-o checked fa-lg"></i>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="checkbox-wrapper">
+                        <div class="custom-checkbox letter-checkbox">
+                            <label>
+                                <input type="checkbox"/>
+                                <i class="fa fa-star-o unchecked fa-lg"></i>
+                                <i class="fa fa-star checked fa-lg"></i>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="sender letter-link">Homer Simpson</div>
+                </div>
+                <div class="col-xs-4 col-sm-2 col-sm-push-6 col-lg-1 col-lg-push-7">
+                    <div class="receiving-time pull-right">Jun 24</div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-sm-pull-2 col-lg-7 col-lg-pull-1 letter-preview link">
+                    <div class="letter-title">Why you little!</div>
+                    <div class="letter-beginning">Spider-Pig, Spider-Pig, does whatever a Spider-Pig does. Can
+                        he swing from a web? No, he can't, he's a pig, Look out, he is a Spider-Pig!
+                    </div>
+                </div>
+            </div>
+            <div class="row bottom-border">
+                <div class=" col-xs-8 col-sm-4">
+                    <div class="checkbox-wrapper">
+                        <div class="custom-checkbox letter-checkbox">
+                            <label>
+                                <input type="checkbox"/>
+                                <i class="fa fa-square-o unchecked fa-lg"></i>
+                                <i class="fa fa-check-square-o checked fa-lg"></i>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="checkbox-wrapper">
+                        <div class="custom-checkbox letter-checkbox">
+                            <label>
+                                <input type="checkbox"/>
+                                <i class="fa fa-star-o unchecked fa-lg"></i>
+                                <i class="fa fa-star checked fa-lg"></i>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="sender letter-link">Homer Simpson</div>
+                </div>
+                <div class="col-xs-4 col-sm-2 col-sm-push-6 col-lg-1 col-lg-push-7">
+                    <div class="receiving-time pull-right">Jun 24</div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-sm-pull-2 col-lg-7 col-lg-pull-1 letter-preview link">
+                    <div class="letter-title">Why you little!</div>
+                    <div class="letter-beginning">Spider-Pig, Spider-Pig, does whatever a Spider-Pig does. Can
+                        he swing from a web? No, he can't, he's a pig, Look out, he is a Spider-Pig!
+                    </div>
+                </div>
+            </div>
+            <div class="row bottom-border">
+                <div class=" col-xs-8 col-sm-4">
+                    <div class="checkbox-wrapper">
+                        <div class="custom-checkbox letter-checkbox">
+                            <label>
+                                <input type="checkbox"/>
+                                <i class="fa fa-square-o unchecked fa-lg"></i>
+                                <i class="fa fa-check-square-o checked fa-lg"></i>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="checkbox-wrapper">
+                        <div class="custom-checkbox letter-checkbox">
+                            <label>
+                                <input type="checkbox"/>
+                                <i class="fa fa-star-o unchecked fa-lg"></i>
+                                <i class="fa fa-star checked fa-lg"></i>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="sender letter-link">Homer Simpson</div>
+                </div>
+                <div class="col-xs-4 col-sm-2 col-sm-push-6 col-lg-1 col-lg-push-7">
+                    <div class="receiving-time pull-right">Jun 24</div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-sm-pull-2 col-lg-7 col-lg-pull-1 letter-preview link">
+                    <div class="letter-title">Why you little!</div>
+                    <div class="letter-beginning">Spider-Pig, Spider-Pig, does whatever a Spider-Pig does. Can
+                        he swing from a web? No, he can't, he's a pig, Look out, he is a Spider-Pig!
+                    </div>
+                </div>
+            </div>
+            <div class="row bottom-border">
+                <div class=" col-xs-8 col-sm-4">
+                    <div class="checkbox-wrapper">
+                        <div class="custom-checkbox letter-checkbox">
+                            <label>
+                                <input type="checkbox"/>
+                                <i class="fa fa-square-o unchecked fa-lg"></i>
+                                <i class="fa fa-check-square-o checked fa-lg"></i>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="checkbox-wrapper">
+                        <div class="custom-checkbox letter-checkbox">
+                            <label>
+                                <input type="checkbox"/>
+                                <i class="fa fa-star-o unchecked fa-lg"></i>
+                                <i class="fa fa-star checked fa-lg"></i>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="sender letter-link">Homer Simpson</div>
+                </div>
+                <div class="col-xs-4 col-sm-2 col-sm-push-6 col-lg-1 col-lg-push-7">
+                    <div class="receiving-time pull-right">Jun 24</div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-sm-pull-2 col-lg-7 col-lg-pull-1 letter-preview link">
+                    <div class="letter-title">Why you little!</div>
+                    <div class="letter-beginning">Spider-Pig, Spider-Pig, does whatever a Spider-Pig does. Can
+                        he swing from a web? No, he can't, he's a pig, Look out, he is a Spider-Pig!
+                    </div>
+                </div>
+            </div>
+            <div class="row bottom-border">
+                <div class=" col-xs-8 col-sm-4">
+                    <div class="checkbox-wrapper">
+                        <div class="custom-checkbox letter-checkbox">
+                            <label>
+                                <input type="checkbox"/>
+                                <i class="fa fa-square-o unchecked fa-lg"></i>
+                                <i class="fa fa-check-square-o checked fa-lg"></i>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="checkbox-wrapper">
+                        <div class="custom-checkbox letter-checkbox">
+                            <label>
+                                <input type="checkbox"/>
+                                <i class="fa fa-star-o unchecked fa-lg"></i>
+                                <i class="fa fa-star checked fa-lg"></i>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="sender letter-link">Homer Simpson</div>
+                </div>
+                <div class="col-xs-4 col-sm-2 col-sm-push-6 col-lg-1 col-lg-push-7">
+                    <div class="receiving-time pull-right">Jun 24</div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-sm-pull-2 col-lg-7 col-lg-pull-1 letter-preview link">
+                    <div class="letter-title">Why you little!</div>
+                    <div class="letter-beginning">Spider-Pig, Spider-Pig, does whatever a Spider-Pig does. Can
+                        he swing from a web? No, he can't, he's a pig, Look out, he is a Spider-Pig!
+                    </div>
+                </div>
+            </div>
+            <div class="row bottom-border">
+                <div class=" col-xs-8 col-sm-4">
+                    <div class="checkbox-wrapper">
+                        <div class="custom-checkbox letter-checkbox">
+                            <label>
+                                <input type="checkbox"/>
+                                <i class="fa fa-square-o unchecked fa-lg"></i>
+                                <i class="fa fa-check-square-o checked fa-lg"></i>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="checkbox-wrapper">
+                        <div class="custom-checkbox letter-checkbox">
+                            <label>
+                                <input type="checkbox"/>
+                                <i class="fa fa-star-o unchecked fa-lg"></i>
+                                <i class="fa fa-star checked fa-lg"></i>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="sender letter-link">Homer Simpson</div>
+                </div>
+                <div class="col-xs-4 col-sm-2 col-sm-push-6 col-lg-1 col-lg-push-7">
+                    <div class="receiving-time pull-right">Jun 24</div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-sm-pull-2 col-lg-7 col-lg-pull-1 letter-preview link">
+                    <div class="letter-title">Why you little!</div>
+                    <div class="letter-beginning">Spider-Pig, Spider-Pig, does whatever a Spider-Pig does. Can
+                        he swing from a web? No, he can't, he's a pig, Look out, he is a Spider-Pig!
+                    </div>
+                </div>
+            </div>
+            <div class="row bottom-border">
+                <div class=" col-xs-8 col-sm-4">
+                    <div class="checkbox-wrapper">
+                        <div class="custom-checkbox letter-checkbox">
+                            <label>
+                                <input type="checkbox"/>
+                                <i class="fa fa-square-o unchecked fa-lg"></i>
+                                <i class="fa fa-check-square-o checked fa-lg"></i>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="checkbox-wrapper">
+                        <div class="custom-checkbox letter-checkbox">
+                            <label>
+                                <input type="checkbox"/>
+                                <i class="fa fa-star-o unchecked fa-lg"></i>
+                                <i class="fa fa-star checked fa-lg"></i>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="sender letter-link">Homer Simpson</div>
+                </div>
+                <div class="col-xs-4 col-sm-2 col-sm-push-6 col-lg-1 col-lg-push-7">
+                    <div class="receiving-time pull-right">Jun 24</div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-sm-pull-2 col-lg-7 col-lg-pull-1 letter-preview link">
+                    <div class="letter-title">Why you little!</div>
+                    <div class="letter-beginning">Spider-Pig, Spider-Pig, does whatever a Spider-Pig does. Can
+                        he swing from a web? No, he can't, he's a pig, Look out, he is a Spider-Pig!
+                    </div>
+                </div>
+            </div>
+            <div class="row bottom-border">
+                <div class=" col-xs-8 col-sm-4">
+                    <div class="checkbox-wrapper">
+                        <div class="custom-checkbox letter-checkbox">
+                            <label>
+                                <input type="checkbox"/>
+                                <i class="fa fa-square-o unchecked fa-lg"></i>
+                                <i class="fa fa-check-square-o checked fa-lg"></i>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="checkbox-wrapper">
+                        <div class="custom-checkbox letter-checkbox">
+                            <label>
+                                <input type="checkbox"/>
+                                <i class="fa fa-star-o unchecked fa-lg"></i>
+                                <i class="fa fa-star checked fa-lg"></i>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="sender letter-link">Homer Simpson</div>
+                </div>
+                <div class="col-xs-4 col-sm-2 col-sm-push-6 col-lg-1 col-lg-push-7">
+                    <div class="receiving-time pull-right">Jun 24</div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-sm-pull-2 col-lg-7 col-lg-pull-1 letter-preview link">
+                    <div class="letter-title">Why you little!</div>
+                    <div class="letter-beginning">Spider-Pig, Spider-Pig, does whatever a Spider-Pig does. Can
+                        he swing from a web? No, he can't, he's a pig, Look out, he is a Spider-Pig!
+                    </div>
+                </div>
+            </div>
+            <div class="row bottom-border">
+                <div class=" col-xs-8 col-sm-4">
+                    <div class="checkbox-wrapper">
+                        <div class="custom-checkbox letter-checkbox">
+                            <label>
+                                <input type="checkbox"/>
+                                <i class="fa fa-square-o unchecked fa-lg"></i>
+                                <i class="fa fa-check-square-o checked fa-lg"></i>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="checkbox-wrapper">
+                        <div class="custom-checkbox letter-checkbox">
+                            <label>
+                                <input type="checkbox"/>
+                                <i class="fa fa-star-o unchecked fa-lg"></i>
+                                <i class="fa fa-star checked fa-lg"></i>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="sender letter-link">Homer Simpson</div>
+                </div>
+                <div class="col-xs-4 col-sm-2 col-sm-push-6 col-lg-1 col-lg-push-7">
+                    <div class="receiving-time pull-right">Jun 24</div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-sm-pull-2 col-lg-7 col-lg-pull-1 letter-preview link">
+                    <div class="letter-title">Why you little!</div>
+                    <div class="letter-beginning">Spider-Pig, Spider-Pig, does whatever a Spider-Pig does. Can
+                        he swing from a web? No, he can't, he's a pig, Look out, he is a Spider-Pig!
+                    </div>
+                </div>
+            </div>
+            <div class="row bottom-border">
+                <div class=" col-xs-8 col-sm-4">
+                    <div class="checkbox-wrapper">
+                        <div class="custom-checkbox letter-checkbox">
+                            <label>
+                                <input type="checkbox"/>
+                                <i class="fa fa-square-o unchecked fa-lg"></i>
+                                <i class="fa fa-check-square-o checked fa-lg"></i>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="checkbox-wrapper">
+                        <div class="custom-checkbox letter-checkbox">
+                            <label>
+                                <input type="checkbox"/>
+                                <i class="fa fa-star-o unchecked fa-lg"></i>
+                                <i class="fa fa-star checked fa-lg"></i>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="sender letter-link">Homer Simpson</div>
+                </div>
+                <div class="col-xs-4 col-sm-2 col-sm-push-6 col-lg-1 col-lg-push-7">
+                    <div class="receiving-time pull-right">Jun 24</div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-sm-pull-2 col-lg-7 col-lg-pull-1 letter-preview link">
+                    <div class="letter-title">Why you little!</div>
+                    <div class="letter-beginning">Spider-Pig, Spider-Pig, does whatever a Spider-Pig does. Can
+                        he swing from a web? No, he can't, he's a pig, Look out, he is a Spider-Pig!
+                    </div>
+                </div>
+            </div>
+            <div class="row bottom-border">
+                <div class=" col-xs-8 col-sm-4">
+                    <div class="checkbox-wrapper">
+                        <div class="custom-checkbox letter-checkbox">
+                            <label>
+                                <input type="checkbox"/>
+                                <i class="fa fa-square-o unchecked fa-lg"></i>
+                                <i class="fa fa-check-square-o checked fa-lg"></i>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="checkbox-wrapper">
+                        <div class="custom-checkbox letter-checkbox">
+                            <label>
+                                <input type="checkbox"/>
+                                <i class="fa fa-star-o unchecked fa-lg"></i>
+                                <i class="fa fa-star checked fa-lg"></i>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="sender letter-link">Homer Simpson</div>
+                </div>
+                <div class="col-xs-4 col-sm-2 col-sm-push-6 col-lg-1 col-lg-push-7">
+                    <div class="receiving-time pull-right">Jun 24</div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-sm-pull-2 col-lg-7 col-lg-pull-1 letter-preview link">
+                    <div class="letter-title">Why you little!</div>
+                    <div class="letter-beginning">Spider-Pig, Spider-Pig, does whatever a Spider-Pig does. Can
+                        he swing from a web? No, he can't, he's a pig, Look out, he is a Spider-Pig!
                     </div>
                 </div>
             </div>
