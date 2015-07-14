@@ -14,7 +14,7 @@ gulp.task('sass', function(done) {
             style   : "compact",
             errLogToConsole: true
         }))
-        .pipe(gulp.dest('css'))
+        .pipe(gulp.dest('public/css'))
         .on('end', done);
 });
 
