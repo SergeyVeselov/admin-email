@@ -3,6 +3,8 @@ $sidebar-width: 200px;
 $sidebar-content-padding: 10px;
 $light-background: #FFFFFF;
 $dark-background: #E7EBEE;
+$mailbox-right-padding: 25px;
+$bootstrap-col-padding: 15px;
 
 @mixin circle($diameter) {
   border-radius: 50%;
@@ -40,12 +42,21 @@ html, body {
 
 .mailbox {
   padding-left: $sidebar-width;
-  padding-right: 25px;
+  padding-right: $mailbox-right-padding;
 }
 
 @media (max-width: 767px) {
   .mailbox {
     padding-left: 0;
+  }
+  .navigation-group-container {
+    padding-left: 12px;
+  }
+}
+
+@media (min-width: 768px) {
+  .navigation-group-container {
+    padding-left: $sidebar-width;
   }
 }
 
@@ -190,5 +201,44 @@ html, body {
     cursor: pointer;
   }
 }
+
+.select-letters-checkbox {
+  padding: 6px 12px;
+  border: solid #ccc;
+  border-width: 1px 0 1px 1px;
+  background-color: #fff;
+  border-radius: 4px 0 0 4px;
+}
+
+.select-letter-options {
+  border-radius: 0 4px 4px 0;
+  margin-right: 2px;
+}
+
+.navigation-group {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.navigation-group-container .row {
+  padding-left: 3px;
+}
+
+.menu {
+  float: right;
+  height: 34px;
+  position: relative;
+  display: table;
+  padding-right: 15px;
+  padding-left: 15px;
+  i {
+    color: #AAA;
+    display: table-cell;
+    vertical-align: middle;
+  }
+}
+
 
 

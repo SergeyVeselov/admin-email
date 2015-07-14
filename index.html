@@ -7,13 +7,68 @@
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="sass/index.css">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-2.1.4.js"></script>
+    <script src="js/bootstrap.js"></script>
 </head>
 <body>
 <nav class="navbar navbar-default navbar-fixed-top">
     <a class="navbar-brand hidden-xs" href="#">
         <img src="http://akveo.com/img/logo.png">
     </a>
+
+    <div class="container-fluid navigation-group-container">
+        <div class="row">
+            <div class="input-group navigation-group">
+                <div class="col-sm-4 col-md-3">
+                    <div class="checkbox-wrapper select-letters-checkbox" style="float: left">
+                        <div class="custom-checkbox letter-checkbox">
+                            <label>
+                                <input type="checkbox"/>
+                                <i class="fa fa-square-o unchecked fa-lg"></i>
+                                <i class="fa fa-check-square-o checked fa-lg"></i>
+                            </label>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-default dropdown-toggle select-letter-options"
+                            data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false" style="float: left">
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">All</a></li>
+                        <li><a href="#">None</a></li>
+                        <li><a href="#">Toggle</a></li>
+                    </ul>
+                    <div class="dropdown" style="float: left">
+                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1"
+                                data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="true">
+                            Mark
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                            <li><a href="#">as read</a></li>
+                            <li><a href="#">as unread</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-8 col-md-9 hidden-xs">
+                    <div class="menu">
+                        <i class="fa fa-navicon fa-2x"></i>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search for...">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button">
+                                <span class="glyphicon glyphicon-search" aria-hidden="true">
+                                </span>
+                            </button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </nav>
 <div class="main-block">
     <div class="sidebar hidden-xs">
