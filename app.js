@@ -19,10 +19,7 @@ var inputLetters = [
 ];
 
 app.get('/letters/', function (req, res) {
-    res.send(JSON.stringify(inputLetters.map(function (letter) {
-        delete letter['text'];
-        return letter;
-    })));
+    res.send(JSON.stringify(inputLetters));
 });
 
 app.get('/letters/*', function (req, res) {
