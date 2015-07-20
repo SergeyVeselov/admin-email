@@ -1,7 +1,7 @@
-var app = app || {};
-var Letters = Backbone.Collection.extend({
-    url: '/letters',
-    model: app.Letter
+define(['js/lib/backbone', 'js/models/letter'], function(_, Letter) {
+    return Backbone.Collection.extend({
+        url: '/letters',
+        model: Letter
+    });
 });
-app.letters = new Letters();
 

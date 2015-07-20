@@ -1,2 +1,3 @@
-var app = app || {};
-app.Letter = Backbone.Model.extend();
+define(['js/lib/backbone'], function(Backbone) {
+    return Backbone.Model.extend();
+});
