@@ -27,7 +27,7 @@ gulp.task('protractor', function () {
     var protractor = require("gulp-protractor").protractor;
     gulp.src(["./tests/*.js"])
         .pipe(protractor({
-            configFile: "protractor.js",
+            configFile: "protractor.conf.js",
             args: ['--baseUrl', 'http://127.0.0.1:4444']
         }))
         .on('error', function (e) {
