@@ -10,8 +10,10 @@
   "license": "ISC",
   "devDependencies": {
     "gulp": "^3.9.0",
+    "gulp-protractor": "^1.0.0",
     "gulp-sass": "^2.0.3",
     "jasmine-core": "^2.3.4",
+    "protractor": "^2.1.0",
     "requirejs": "^2.1.19"
   }
 }
