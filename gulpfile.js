@@ -1,6 +1,5 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
-var shell = require('gulp-shell');
 
 var paths = {
     sass: ['./sass/**/*.scss']
@@ -15,12 +14,18 @@ gulp.task('sass', function (done) {
             style: "compact",
             errLogToConsole: true
         }))
+        .on('error', function(error) {
+            console.log(error);
+            this.emit('end')
+        })
         .pipe(gulp.dest('public/css'))
         .on('end', done);
 });
 
 gulp.task('watch', ['sass'], function () {
-    gulp.watch(paths.sass, ['sass']);
+    gulp.watch(paths.sass, ['sass']).on("error", function (error) {
+        console.log(error)
+    });
 });
 
 gulp.task('protractor', function () {
