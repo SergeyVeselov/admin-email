@@ -5,16 +5,7 @@ $light-background: #FFFFFF;
 $dark-background: #E7EBEE;
 $mailbox-right-padding: 25px;
 $bootstrap-col-padding: 15px;
-
-@mixin circle($diameter) {
-  border-radius: 50%;
-  width: $diameter;
-  height: $diameter;
-  line-height: $diameter;
-  display: inline-block;
-  position: absolute;
-  margin: auto;
-}
+$avatar-diameter: 48px;
 
 html, body {
   height: 100%;
@@ -45,6 +36,10 @@ html, body {
   padding-right: $mailbox-right-padding;
 }
 
+.mailbox-container {
+  position: relative;
+}
+
 @media (max-width: 767px) {
   .mailbox {
     padding-left: 0;
@@ -62,7 +57,6 @@ html, body {
 
 .checkbox-wrapper {
   height: 100%;
-  display: inline-block;
 }
 
 .custom-checkbox {
@@ -95,10 +89,6 @@ html, body {
       }
     }
   }
-}
-
-.sender {
-  display: inline-block;
 }
 
 .letter-preview {
@@ -153,7 +143,6 @@ html, body {
 }
 
 .user {
-  $avatar-diameter: 48px;
   display: inline-block;
   height: $avatar-diameter;
   vertical-align: top;
@@ -161,29 +150,6 @@ html, body {
   margin-top: 1px;
   margin-bottom: 1px;
   width: 100%;
-  .avatar {
-    display: inline-block;
-    @include circle($avatar-diameter);
-    overflow: hidden;
-    border: solid 2px $dark-background;
-    background: $light-background;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-    vertical-align: middle;
-    img {
-      height: 40px;
-      width: auto;
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      margin: auto;
-      display: inline-block;
-    }
-  }
   .name {
     width: 100%;
     padding-left: $avatar-diameter + 2px;
@@ -193,6 +159,44 @@ html, body {
     overflow: hidden;
     text-overflow: ellipsis;
   }
+}
+
+.contacts-avatar {
+  display: inline-block;
+  border-radius: 50%;
+  width: $avatar-diameter;
+  height: $avatar-diameter;
+  line-height: $avatar-diameter;
+  position: absolute;
+  margin: auto;
+  overflow: hidden;
+  background: $light-background;
+  top: 0;
+  bottom: 0;
+  vertical-align: middle;
+}
+.full-letter-avatar {
+  position: relative;
+  display: inline-block;
+  border-radius: 50%;
+  width: $avatar-diameter;
+  height: $avatar-diameter;
+  line-height: $avatar-diameter;
+  overflow: hidden;
+  background: $light-background;
+  vertical-align: middle;
+}
+
+.contacts-avatar-img {
+  height: 40px;
+  width: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  display: inline-block;
 }
 
 .link {
@@ -240,5 +244,45 @@ html, body {
   }
 }
 
+.full-letter {
+  display: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  padding-top: 15px;
+}
 
+.full-letter-sender-name {
+  font-size: 22px;
+  padding-left: 15px;
+}
+
+.float-left {
+  float: left;
+}
+
+.checkboxes-and-sender-name {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.sender {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.full-letter-answer {
+  padding-bottom: $sidebar-content-padding;
+  button {
+    background-color: $light-green;
+    color: white;
+    border: none;
+    padding: 10px;
+  }
+}
+
+.receiving-time {
+  white-space: nowrap;
+}
 

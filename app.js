@@ -7,14 +7,146 @@ var inputLetters = [
     {
         id: 1,
         sender: "Homer Simpson",
-        title: "Doh!",
-        text: "Why you little!"
+        title: "And how is education supposed to make me feel smarter?",
+        text: "And how is education supposed to make me feel smarter? Besides, every time I learn something new, it pushes some old stuff out of my brain. Remember when I took that home wine making course, and I forgot how to drive?"
     },
     {
         id: 2,
-        sender: "Bart Simpson",
-        title: "Caramba!",
-        text: "Eat my shorts!"
+        sender: "Homer Simpson",
+        title: "And how is education supposed to make me feel smarter?",
+        text: "And how is education supposed to make me feel smarter? Besides, every time I learn something new, it pushes some old stuff out of my brain. Remember when I took that home wine making course, and I forgot how to drive?"
+    },
+    {
+        id: 3,
+        sender: "Homer Simpson",
+        title: "And how is education supposed to make me feel smarter?",
+        text: "And how is education supposed to make me feel smarter? Besides, every time I learn something new, it pushes some old stuff out of my brain. Remember when I took that home wine making course, and I forgot how to drive?"
+    },
+    {
+        id: 4,
+        sender: "Homer Simpson",
+        title: "And how is education supposed to make me feel smarter?",
+        text: "And how is education supposed to make me feel smarter? Besides, every time I learn something new, it pushes some old stuff out of my brain. Remember when I took that home wine making course, and I forgot how to drive?"
+    },
+    {
+        id: 5,
+        sender: "Homer Simpson",
+        title: "And how is education supposed to make me feel smarter?",
+        text: "And how is education supposed to make me feel smarter? Besides, every time I learn something new, it pushes some old stuff out of my brain. Remember when I took that home wine making course, and I forgot how to drive?"
+    },
+    {
+        id: 6,
+        sender: "Homer Simpson",
+        title: "And how is education supposed to make me feel smarter?",
+        text: "And how is education supposed to make me feel smarter? Besides, every time I learn something new, it pushes some old stuff out of my brain. Remember when I took that home wine making course, and I forgot how to drive?"
+    },
+    {
+        id: 7,
+        sender: "Homer Simpson",
+        title: "And how is education supposed to make me feel smarter?",
+        text: "And how is education supposed to make me feel smarter? Besides, every time I learn something new, it pushes some old stuff out of my brain. Remember when I took that home wine making course, and I forgot how to drive?"
+    },
+    {
+        id: 8,
+        sender: "Homer Simpson",
+        title: "And how is education supposed to make me feel smarter?",
+        text: "And how is education supposed to make me feel smarter? Besides, every time I learn something new, it pushes some old stuff out of my brain. Remember when I took that home wine making course, and I forgot how to drive?"
+    },
+    {
+        id: 9,
+        sender: "Homer Simpson",
+        title: "And how is education supposed to make me feel smarter?",
+        text: "And how is education supposed to make me feel smarter? Besides, every time I learn something new, it pushes some old stuff out of my brain. Remember when I took that home wine making course, and I forgot how to drive?"
+    },
+    {
+        id: 10,
+        sender: "Homer Simpson",
+        title: "And how is education supposed to make me feel smarter?",
+        text: "And how is education supposed to make me feel smarter? Besides, every time I learn something new, it pushes some old stuff out of my brain. Remember when I took that home wine making course, and I forgot how to drive?"
+    },
+    {
+        id: 11,
+        sender: "Homer Simpson",
+        title: "And how is education supposed to make me feel smarter?",
+        text: "And how is education supposed to make me feel smarter? Besides, every time I learn something new, it pushes some old stuff out of my brain. Remember when I took that home wine making course, and I forgot how to drive?"
+    },
+    {
+        id: 12,
+        sender: "Homer Simpson",
+        title: "And how is education supposed to make me feel smarter?",
+        text: "And how is education supposed to make me feel smarter? Besides, every time I learn something new, it pushes some old stuff out of my brain. Remember when I took that home wine making course, and I forgot how to drive?"
+    },
+    {
+        id: 13,
+        sender: "Homer Simpson",
+        title: "And how is education supposed to make me feel smarter?",
+        text: "And how is education supposed to make me feel smarter? Besides, every time I learn something new, it pushes some old stuff out of my brain. Remember when I took that home wine making course, and I forgot how to drive?"
+    },
+    {
+        id: 14,
+        sender: "Homer Simpson",
+        title: "And how is education supposed to make me feel smarter?",
+        text: "And how is education supposed to make me feel smarter? Besides, every time I learn something new, it pushes some old stuff out of my brain. Remember when I took that home wine making course, and I forgot how to drive?"
+    },
+    {
+        id: 15,
+        sender: "Homer Simpson",
+        title: "And how is education supposed to make me feel smarter?",
+        text: "And how is education supposed to make me feel smarter? Besides, every time I learn something new, it pushes some old stuff out of my brain. Remember when I took that home wine making course, and I forgot how to drive?"
+    },
+    {
+        id: 16,
+        sender: "Homer Simpson",
+        title: "And how is education supposed to make me feel smarter?",
+        text: "And how is education supposed to make me feel smarter? Besides, every time I learn something new, it pushes some old stuff out of my brain. Remember when I took that home wine making course, and I forgot how to drive?"
+    },
+    {
+        id: 17,
+        sender: "Homer Simpson",
+        title: "And how is education supposed to make me feel smarter?",
+        text: "And how is education supposed to make me feel smarter? Besides, every time I learn something new, it pushes some old stuff out of my brain. Remember when I took that home wine making course, and I forgot how to drive?"
+    },
+    {
+        id: 18,
+        sender: "Homer Simpson",
+        title: "And how is education supposed to make me feel smarter?",
+        text: "And how is education supposed to make me feel smarter? Besides, every time I learn something new, it pushes some old stuff out of my brain. Remember when I took that home wine making course, and I forgot how to drive?"
+    },
+    {
+        id: 19,
+        sender: "Homer Simpson",
+        title: "And how is education supposed to make me feel smarter?",
+        text: "And how is education supposed to make me feel smarter? Besides, every time I learn something new, it pushes some old stuff out of my brain. Remember when I took that home wine making course, and I forgot how to drive?"
+    },
+    {
+        id: 20,
+        sender: "Homer Simpson",
+        title: "And how is education supposed to make me feel smarter?",
+        text: "And how is education supposed to make me feel smarter? Besides, every time I learn something new, it pushes some old stuff out of my brain. Remember when I took that home wine making course, and I forgot how to drive?"
+    },
+    {
+        id: 21,
+        sender: "Homer Simpson",
+        title: "And how is education supposed to make me feel smarter?",
+        text: "And how is education supposed to make me feel smarter? Besides, every time I learn something new, it pushes some old stuff out of my brain. Remember when I took that home wine making course, and I forgot how to drive?"
+    },
+    {
+        id: 22,
+        sender: "Homer Simpson",
+        title: "And how is education supposed to make me feel smarter?",
+        text: "And how is education supposed to make me feel smarter? Besides, every time I learn something new, it pushes some old stuff out of my brain. Remember when I took that home wine making course, and I forgot how to drive?"
+    },
+    {
+        id: 23,
+        sender: "Homer Simpson",
+        title: "And how is education supposed to make me feel smarter?",
+        text: "And how is education supposed to make me feel smarter? Besides, every time I learn something new, it pushes some old stuff out of my brain. Remember when I took that home wine making course, and I forgot how to drive?"
+    },
+    {
+        id: 24,
+        sender: "Homer Simpson",
+        title: "And how is education supposed to make me feel smarter?",
+        text: "And how is education supposed to make me feel smarter? Besides, every time I learn something new, it pushes some old stuff out of my brain. Remember when I took that home wine making course, and I forgot how to drive?"
     }
 ];
 
