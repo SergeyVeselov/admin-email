@@ -117,8 +117,13 @@ html, body {
   padding-bottom: $sidebar-content-padding;
 }
 
+.folder-image {
+  width: 20px;
+  float: left;
+}
 .badge {
-  margin-left: 5px;
+  float: right;
+  font-weight: normal;
 }
 
 .sidebar-content {
