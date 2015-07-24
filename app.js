@@ -13,14 +13,14 @@ var inputLetters = [
     {
         id: 2,
         sender: "Homer Simpson",
-        title: "And how is education supposed to make me feel smarter?",
-        text: "And how is education supposed to make me feel smarter? Besides, every time I learn something new, it pushes some old stuff out of my brain. Remember when I took that home wine making course, and I forgot how to drive?"
+        title: "I know what you're saying, Bart.",
+        text: "I know what you're saying, Bart. When I was young, I wanted an electric football machine more than anything else in the world, and my parents bought it for me, and it was the happiest day of my life. Well, goodnight."
     },
     {
         id: 3,
         sender: "Homer Simpson",
-        title: "And how is education supposed to make me feel smarter?",
-        text: "And how is education supposed to make me feel smarter? Besides, every time I learn something new, it pushes some old stuff out of my brain. Remember when I took that home wine making course, and I forgot how to drive?"
+        title: "Kill myself?",
+        text: "Kill myself? Killing myself is the last thing I'd ever do. Now I have a purpose, a reason to live. I don't care who I have to face, I don't care who I have to fight, I will not rest until this street gets a stop sign!"
     },
     {
         id: 4,

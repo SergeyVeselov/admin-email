@@ -1,4 +1,4 @@
-define(['text!templates/letter.html', 'handlebars', 'js/lib/backbone'], function(letterTemplate, handlebars) {
+define(['text!templates/letter.html', 'handlebars', 'js/lib/backbone'], function (letterTemplate, handlebars) {
     return Backbone.View.extend({
         initialize: function (options) {
             this.eventBus = options.eventBus;
@@ -9,8 +9,8 @@ define(['text!templates/letter.html', 'handlebars', 'js/lib/backbone'], function
             return this;
         },
         events: {
-            "click .letter-preview": function() {
-                this.eventBus.trigger("showLetter")
+            "click .letter-preview": function () {
+                this.eventBus.trigger("showLetter", this.model.attributes);
             }
         }
     });
