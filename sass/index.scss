@@ -161,20 +161,17 @@ html, body {
   }
 }
 
-.contacts-avatar {
-  display: inline-block;
+.avatar {
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
-  width: $avatar-diameter;
-  height: $avatar-diameter;
-  line-height: $avatar-diameter;
-  position: absolute;
-  margin: auto;
-  overflow: hidden;
-  background: $light-background;
-  top: 0;
-  bottom: 0;
-  vertical-align: middle;
 }
+
+.contacts-avatar {
+  position: absolute;
+  left: 0;
+}
+
 .full-letter-avatar {
   position: relative;
   display: inline-block;
@@ -185,18 +182,6 @@ html, body {
   overflow: hidden;
   background: $light-background;
   vertical-align: middle;
-}
-
-.contacts-avatar-img {
-  height: 40px;
-  width: auto;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  display: inline-block;
 }
 
 .link {
