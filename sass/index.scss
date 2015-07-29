@@ -303,6 +303,9 @@ label {
   &:hover {
     cursor: pointer;
   }
+  &:focus {
+    outline: 0;
+  }
 }
 
 .mark-message {
