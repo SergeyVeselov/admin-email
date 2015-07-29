@@ -18,6 +18,8 @@ define(['js/lib/backbone', 'js/views/letters', 'js/collections/letters', 'js/vie
             $(".checkboxes-and-sender-name").removeClass("col-xs-8 col-sm-4");
             $(".receiving-time-container").hide();
             $(".letter-preview").removeClass("col-xs-12 col-sm-6 col-sm-pull-2 col-lg-7 col-lg-pull-1");
+            $('.menu').css({'padding-right': 0});
+            $('.navbar-right-container').css({'padding-right': 0});
         });
         Backbone.listenTo(eventBus, "closeFullLetter", function() {
             lettersView.render();
@@ -25,6 +27,8 @@ define(['js/lib/backbone', 'js/views/letters', 'js/collections/letters', 'js/vie
             $('.mailbox-container').removeClass('row');
             $(".letter-preview-container").removeClass('col-xs-4');
             $('.full-letter').hide();
+            $('.menu').css({'padding-right': $('.menu').css('padding-left')});
+            $('.navbar-right-container').css({'padding-right': $('.navbar-right-container').css('padding-left')});
         });
         letters.fetch();
     });
