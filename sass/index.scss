@@ -8,6 +8,7 @@ $bootstrap-col-padding: 15px;
 $avatar-diameter: 48px;
 $purple: #9C488B;
 $turquoise: #5ebbba;
+$green: #799B4F;
 
 html, body {
   height: 100%;
@@ -153,13 +154,13 @@ label {
 
 .letter-badges {
   :nth-child(3n + 1) {
-    background-color: $purple;
+    background-color: $green;
   }
   :nth-child(3n + 2) {
     background-color: $turquoise;
   }
   :nth-child(3n + 3) {
-    background-color: $blue;
+    background-color: $purple;
   }
 }
 
