@@ -9,7 +9,7 @@ $avatar-diameter: 48px;
 
 html, body {
   height: 100%;
-  font-family: 'Open Sans', arial, sans-serif;
+  font-family: 'Lato', arial, sans-serif;
 }
 
 label {
@@ -348,3 +348,5 @@ input[type=checkbox].mark-message-checkbox {
   @include custom-checkbox(20px, "../img/mark-message-checkbox.png")
 }
 
+@font-face { font-family: Lato; src: url('../fonts/Lato-Regular.ttf'); }
+@font-face { font-family: Lato; font-weight: bold; src: url('../fonts/Lato-Bold.ttf'); }
