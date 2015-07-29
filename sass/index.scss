@@ -1,4 +1,4 @@
-$light-green: #40bde8;
+$blue: #40bde8;
 $sidebar-width: 200px;
 $sidebar-content-padding: 10px;
 $light-background: #FFFFFF;
@@ -6,6 +6,8 @@ $dark-background: #E7EBEE;
 $mailbox-right-padding: 25px;
 $bootstrap-col-padding: 15px;
 $avatar-diameter: 48px;
+$purple: #9C488B;
+$turquoise: #5ebbba;
 
 html, body {
   height: 100%;
@@ -141,12 +143,24 @@ label {
   float: left;
 }
 
-.badge {
+.folder-badge {
   float: right;
   font-weight: normal;
-  background-color: #5ebbba;
+  background-color: $turquoise;
   margin-left: auto;
   font-size: 10px;
+}
+
+.letter-badges {
+  :nth-child(3n + 1) {
+    background-color: $purple;
+  }
+  :nth-child(3n + 2) {
+    background-color: $turquoise;
+  }
+  :nth-child(3n + 3) {
+    background-color: $blue;
+  }
 }
 
 .sidebar-content {
@@ -156,7 +170,7 @@ label {
 .compose-mail {
   padding-bottom: $sidebar-content-padding;
   button {
-    background-color: $light-green;
+    background-color: $blue;
     color: white;
     border: none;
     width: 100%;
@@ -265,7 +279,18 @@ label {
 
 .full-letter-sender-name {
   font-size: 22px;
+}
+
+.contact-information {
   padding-left: 15px;
+  > div {
+    > i {
+      width: 14px;
+      margin-right: 5px;
+      color: $purple;
+      text-align: center;
+    }
+  }
 }
 
 .float-left {
@@ -291,7 +316,7 @@ label {
 .full-letter-answer {
   padding-bottom: $sidebar-content-padding;
   button {
-    background-color: $light-green;
+    background-color: $blue;
     color: white;
     border: none;
     padding: 10px;
@@ -324,7 +349,7 @@ label {
 }
 
 @mixin custom-checkbox($size, $img-url) {
-    position: absolute;
+  position: absolute;
   z-index: -1000;
   left: -1000px;
   overflow: hidden;
@@ -352,9 +377,18 @@ label {
 input[type=checkbox].css-checkbox {
   @include custom-checkbox(17px, "../img/star-checkbox.png");
 }
+
 input[type=checkbox].mark-message-checkbox {
   @include custom-checkbox(20px, "../img/mark-message-checkbox.png")
 }
 
-@font-face { font-family: Lato; src: url('../fonts/Lato-Regular.ttf'); }
-@font-face { font-family: Lato; font-weight: bold; src: url('../fonts/Lato-Bold.ttf'); }
+@font-face {
+  font-family: Lato;
+  src: url('../fonts/Lato-Regular.ttf');
+}
+
+@font-face {
+  font-family: Lato;
+  font-weight: bold;
+  src: url('../fonts/Lato-Bold.ttf');
+}
