@@ -108,6 +108,7 @@ label {
 .letter-preview {
   white-space: nowrap;
   overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .letter-title {
@@ -118,8 +119,6 @@ label {
 .letter-beginning {
   padding-left: 8px;
   color: #777;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 .bottom-border {
