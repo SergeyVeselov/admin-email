@@ -1,4 +1,4 @@
-$light-green: #97C664;
+$light-green: #40bde8;
 $sidebar-width: 200px;
 $sidebar-content-padding: 10px;
 $light-background: #FFFFFF;
@@ -131,6 +131,12 @@ label {
   padding-bottom: $sidebar-content-padding;
 }
 
+.folder {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
 .folder-image {
   width: 20px;
   float: left;
@@ -139,6 +145,9 @@ label {
 .badge {
   float: right;
   font-weight: normal;
+  background-color: #5ebbba;
+  margin-left: auto;
+  font-size: 10px;
 }
 
 .sidebar-content {
