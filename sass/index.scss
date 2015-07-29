@@ -12,6 +12,10 @@ html, body {
   font-family: 'Open Sans', arial, sans-serif;
 }
 
+label {
+  margin-bottom: 0;
+}
+
 .navbar-brand {
   width: $sidebar-width;
   img {
@@ -57,7 +61,10 @@ html, body {
 }
 
 .checkbox-wrapper {
-  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 5px
 }
 
 .custom-checkbox {
@@ -97,6 +104,7 @@ html, body {
   padding-top: $vertical-padding;
   padding-bottom: $vertical-padding;
 }
+
 .letter-preview {
   white-space: nowrap;
   overflow: hidden;
@@ -127,6 +135,7 @@ html, body {
   width: 20px;
   float: left;
 }
+
 .badge {
   float: right;
   font-weight: normal;
@@ -258,6 +267,9 @@ html, body {
 .checkboxes-and-sender-name {
   overflow: hidden;
   white-space: nowrap;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .sender {
@@ -291,5 +303,45 @@ html, body {
   &:hover {
     cursor: pointer;
   }
+}
+
+.mark-message {
+  float: left;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+@mixin custom-checkbox($size, $img-url) {
+    position: absolute;
+  z-index: -1000;
+  left: -1000px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  & + label.css-label {
+    padding-left: $size;
+    height: $size;
+    display: inline-block;
+    line-height: $size;
+    background: url($img-url) no-repeat 0 0;
+    font-size: $size;
+    vertical-align: middle;
+    cursor: pointer;
+  }
+  &:checked + label.css-label {
+    background-position: 0 (-$size);
+  }
+}
+
+input[type=checkbox].css-checkbox {
+  @include custom-checkbox(17px, "../img/star-checkbox.png");
+}
+input[type=checkbox].mark-message-checkbox {
+  @include custom-checkbox(20px, "../img/mark-message-checkbox.png")
 }
 

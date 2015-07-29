@@ -1,22 +1,12 @@
 <div class="letter row bottom-border">
     <div class="checkboxes-and-sender-name col-xs-8 col-sm-4">
-        <div class="checkbox-wrapper float-left">
-            <div class="custom-checkbox letter-checkbox">
-                <label>
-                    <input type="checkbox"/>
-                    <i class="fa fa-square-o unchecked fa-lg"></i>
-                    <i class="fa fa-check-square-o checked fa-lg"></i>
-                </label>
-            </div>
+        <div class="mark-message">
+            <input type="checkbox" class="mark-message-checkbox" id="mark-message-{{id}}"/>
+            <label class="css-label" for="mark-message-{{id}}"></label>
         </div>
-        <div class="checkbox-wrapper float-left">
-            <div class="custom-checkbox letter-checkbox">
-                <label>
-                    <input type="checkbox"/>
-                    <i class="fa fa-star-o unchecked fa-lg"></i>
-                    <i class="fa fa-star checked fa-lg"></i>
-                </label>
-            </div>
+        <div class="checkbox-wrapper">
+            <input type="checkbox" class="css-checkbox" id="mark-important-id{{id}}"/>
+            <label class="css-label" for="mark-important-id{{id}}"></label>
         </div>
         <div class="sender letter-link">{{sender}}</div>
     </div>
