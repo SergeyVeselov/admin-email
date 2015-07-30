@@ -9,6 +9,11 @@ $avatar-diameter: 48px;
 $purple: #9C488B;
 $turquoise: #5ebbba;
 $green: #799B4F;
+$blur-radius: 8px;
+$spread-radius: 2px;
+$box-shadow: 1px 1px $blur-radius $spread-radius rgba(0, 0, 0, 0.2);
+$main-block-padding-top: 50px;
+$letter-preview-container-padding-top: 15px;
 
 html, body {
   height: 100%;
@@ -30,7 +35,7 @@ label {
 
 .main-block {
   height: 100%;
-  padding-top: 70px;
+  padding-top: $main-block-padding-top;
 }
 
 .sidebar {
@@ -41,7 +46,7 @@ label {
 
 .mailbox {
   padding-left: $sidebar-width;
-  padding-right: $mailbox-right-padding;
+  height: 100%;
 }
 
 .mailbox-container {
@@ -114,6 +119,11 @@ label {
   text-overflow: ellipsis;
 }
 
+.letter-preview-container {
+  box-shadow: $box-shadow;
+  overflow: hidden;
+}
+
 .letter-title {
   font-weight: bold;
   float: left;
@@ -165,7 +175,7 @@ label {
 }
 
 .sidebar-content {
-  padding: 0 20px 20px 20px;
+  padding: 10px 20px 20px 20px;
 }
 
 .compose-mail {
@@ -225,6 +235,7 @@ label {
   overflow: hidden;
   background: $light-background;
   vertical-align: middle;
+  box-shadow: $box-shadow;
 }
 
 .link {
@@ -274,8 +285,16 @@ label {
 
 .full-letter {
   display: none;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  box-shadow: $box-shadow;
   padding-top: 15px;
+  padding-left: 15px;
+  margin-top: $main-block-padding-top + 21px;
+  position: fixed;
+  left: $sidebar-width + 250px;
+  top: 0;
+  bottom: 0;
+  background-color: #FFF;
+  overflow: auto;
 }
 
 .full-letter-sender-name {
