@@ -1,11 +1,11 @@
 define(['js/lib/backbone', 'js/views/letters', 'js/collections/letters', 'js/views/fullLetter'], function (Backbone, LettersView, Letters, FullLetter) {
     $(function () {
         const CHECKBOXES_AND_NAME_PREVIEW = 'col-xs-8 col-sm-4';
-        const CHECKBOXES_AND_NAME_FULL_MESSAGE = 'col-lg-8';
+        const CHECKBOXES_AND_NAME_FULL_MESSAGE = 'col-xs-8';
         const MESSAGE_PREVIEW = 'col-xs-12 col-sm-6 col-sm-pull-2 col-lg-7 col-lg-pull-1';
-        const MESSAGE_FULL_MESSAGE = 'col-lg-12';
+        const MESSAGE_FULL_MESSAGE = 'col-xs-12';
         const TIME_PREVIEW = 'col-xs-4 col-sm-2 col-sm-push-6 col-lg-1 col-lg-push-7';
-        const TIME_FULL_MESSAGE = 'col-lg-4';
+        const TIME_FULL_MESSAGE = 'col-xs-4';
         var eventBus = {};
         _.extend(eventBus, Backbone.Events);
         var letters = new Letters();
