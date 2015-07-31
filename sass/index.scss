@@ -53,8 +53,6 @@ label {
   position: relative;
 }
 
-
-
 .checkbox-wrapper {
   display: flex;
   flex-direction: row;
@@ -250,10 +248,15 @@ label {
   top: 0;
   bottom: 0;
   margin: auto;
+  padding-right: 19px;
+  > div {
+    padding-left: 0px;
+  }
 }
 
 .navigation-group-container .row {
   padding-left: 3px;
+  margin-left: 0;
 }
 
 .menu {
@@ -419,3 +422,13 @@ input[type=checkbox].mark-message-checkbox {
     padding-left: $sidebar-width;
   }
 }
+
+
+
+.navbar-right-container {
+  padding-right: 0;
+  .menu {
+    padding-right: 0;
+  }
+}
+
