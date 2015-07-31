@@ -53,20 +53,7 @@ label {
   position: relative;
 }
 
-@media (max-width: 767px) {
-  .mailbox {
-    padding-left: 0;
-  }
-  .navigation-group-container {
-    padding-left: 12px;
-  }
-}
 
-@media (min-width: 768px) {
-  .navigation-group-container {
-    padding-left: $sidebar-width;
-  }
-}
 
 .checkbox-wrapper {
   display: flex;
@@ -412,4 +399,23 @@ input[type=checkbox].mark-message-checkbox {
   font-family: Lato;
   font-weight: bold;
   src: url('../fonts/Lato-Bold.ttf');
+}
+
+@media (max-width: 767px) {
+  .mailbox {
+    padding-left: 0;
+  }
+  .navigation-group-container {
+    padding-left: 12px;
+  }
+  .full-letter {
+    left: 0;
+    margin-top: $main-block-padding-top;
+  }
+}
+
+@media (min-width: 768px) {
+  .navigation-group-container {
+    padding-left: $sidebar-width;
+  }
 }

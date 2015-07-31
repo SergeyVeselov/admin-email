@@ -35,8 +35,9 @@ define(['js/lib/backbone', 'js/views/letters', 'js/collections/letters', 'js/vie
             maillist.css({width: '250px'});
             maillist.css({float: 'left'});
 
+            $('.letter-preview-container').addClass('hidden-xs');
         });
-        Backbone.listenTo(eventBus, "closeFullLetter", function() {
+        Backbone.listenTo(eventBus, "closeFullLetter", function () {
             lettersView.render();
             $('.full-letter').hide();
 
@@ -57,6 +58,8 @@ define(['js/lib/backbone', 'js/views/letters', 'js/collections/letters', 'js/vie
             var maillist = $('#mail-list');
             maillist.css({width: '100%'});
             maillist.css({float: 'auto'});
+
+            $('.letter-preview-container').removeClass('hidden-xs');
         });
         letters.fetch();
     });
